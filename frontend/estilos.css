@@ -1,0 +1,492 @@
+/* ==========================================================================
+   MI TIENDA — ESTILOS MODERNOS Y PERSONALIZADOS SOBRE BOOTSTRAP 5
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-principal: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --gradiente-primario: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --gradiente-hover: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  --gradiente-acento: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  --gradiente-exito: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --color-fondo: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-texto-dark: #0f172a;
+  --color-texto-muted: #64748b;
+  --sombra-suave: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  --sombra-elevada: 0 12px 30px -4px rgba(79, 70, 229, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+}
+
+body {
+  font-family: var(--font-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN (NAVBAR GLASSMORPHISM)
+   ========================================================================== */
+.navbar-moderna {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  padding: 0.85rem 0;
+  transition: all 0.3s ease;
+}
+
+.brand-logo {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+  color: #0f172a !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--gradiente-primario);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.brand-logo strong {
+  background: var(--gradiente-primario);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link-moderno {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #475569 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link-moderno:hover {
+  color: #4f46e5 !important;
+  background-color: rgba(79, 70, 229, 0.06);
+}
+
+.nav-link-moderno.active {
+  color: #4f46e5 !important;
+  background-color: rgba(79, 70, 229, 0.1);
+}
+
+/* ==========================================================================
+   ENCABEZADO / HERO BANNER
+   ========================================================================== */
+.hero-banner {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background-color: rgba(79, 70, 229, 0.08);
+  color: #4f46e5;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #0f172a;
+}
+
+.hero-title span {
+  background: var(--gradiente-primario);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  color: var(--color-texto-muted);
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+/* ==========================================================================
+   TARJETAS MODERNAS (CARDS & SURFACES)
+   ========================================================================== */
+.tarjeta-custom {
+  background: var(--color-card-bg);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  box-shadow: var(--sombra-suave);
+  padding: 1.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.tarjeta-custom:hover {
+  box-shadow: var(--sombra-elevada);
+}
+
+.card-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.card-header-custom h2,
+.card-header-custom h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   FORMULARIOS E INPUTS MODERNOS
+   ========================================================================== */
+.form-label-modern {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.input-group-modern {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.input-group-modern:focus-within {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3.5px rgba(99, 102, 241, 0.18);
+}
+
+.input-group-modern .input-group-text {
+  background-color: #f8fafc;
+  border: none;
+  color: #64748b;
+  font-size: 1.05rem;
+  padding-left: 14px;
+}
+
+.input-group-modern .form-control {
+  border: none;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.input-group-modern .form-control:focus {
+  box-shadow: none;
+}
+
+textarea.form-control-modern {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+textarea.form-control-modern:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3.5px rgba(99, 102, 241, 0.18);
+}
+
+/* ==========================================================================
+   BOTONES PREMIUM
+   ========================================================================== */
+.btn-gradiente {
+  background: var(--gradiente-primario);
+  color: #ffffff !important;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 11px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn-gradiente:hover {
+  background: var(--gradiente-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+}
+
+.btn-gradiente:disabled {
+  opacity: 0.7;
+  transform: none;
+}
+
+.btn-secundario-custom {
+  background-color: #f1f5f9;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 11px 20px;
+  transition: all 0.2s ease;
+}
+
+.btn-secundario-custom:hover {
+  background-color: #e2e8f0;
+  color: #1e293b !important;
+}
+
+/* ==========================================================================
+   TARJETAS DE PRODUCTO (CATÁLOGO / INVENTARIO)
+   ========================================================================== */
+.card-producto-moderno {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-producto-moderno::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradiente-primario);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card-producto-moderno:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.08);
+}
+
+.card-producto-moderno:hover::before {
+  opacity: 1;
+}
+
+.producto-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.producto-precio-badge {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #4f46e5;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.badge-stock {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.acciones-producto {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btn-accion {
+  flex: 1;
+  padding: 7px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn-accion-editar {
+  background-color: rgba(79, 70, 229, 0.08);
+  color: #4f46e5;
+}
+
+.btn-accion-editar:hover {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.btn-accion-eliminar {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
+
+.btn-accion-eliminar:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   TARJETAS DE MENSAJES DE CONTACTO
+   ========================================================================== */
+.card-mensaje-moderno {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #4f46e5;
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.card-mensaje-moderno:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.mensaje-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.mensaje-remitente {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-circulo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.mensaje-asunto-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.mensaje-texto-box {
+  background-color: #f8fafc;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+  border: 1px solid #f1f5f9;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.footer-moderno {
+  background-color: #0b1120;
+  color: #94a3b8;
+  padding: 2.5rem 0 1.5rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.badge-estado {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pulso-verde {
+  width: 7px;
+  height: 7px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
