@@ -138,5 +138,5 @@ app.delete("/contacto/:id", (req, res) => {
 // Iniciar servidor en el puerto dinámico o 3000 por defecto
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor ejecutándose en http://localhost:${PORT}`);
+  console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
 });

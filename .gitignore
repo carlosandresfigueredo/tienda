@@ -33,3 +33,8 @@ Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
+
+# ==========================================
+# DOCUMENTACIÓN LOCAL PRIVADA
+# ==========================================
+GUIA_TUTORIAL_CRUD.md
